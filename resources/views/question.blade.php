@@ -14,7 +14,7 @@
   <link rel="stylesheet" href="/css/pure/grids-responsive-min.css">
   <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css">
   <link rel="stylesheet" href="./css/styles.css">
-
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
   <title>Test MBTI - Kelompok 5</title>
 </head>
 
@@ -54,11 +54,11 @@
 
       <form action="{{ route('result') }}" method='POST'>
         @csrf
-        <table>
+        <table class="table">
           <thead>
             <tr>
-              <th>No</th>
-              <th>Pernyataan 1</th>
+              <th scope="col">No</th>
+              <th scope="col">Pernyataan 1</th>
               <th colspan='2'>Pilihan</th>
               <th>Pernyataan 2</th>
             </tr>
@@ -81,8 +81,8 @@
 
           <tfoot style="background-color: #FFFFFF;">
             <tr>
-              <th colspan='5'>
-                <br><input type='submit' value='Cek Hasil' class='btn' />
+              <th>
+                <br><input type='submit' value='Cek Hasil' class='btn btn-success' />
               </th>
             </tr>
           </tfoot>
